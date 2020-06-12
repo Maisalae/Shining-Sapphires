@@ -136,7 +136,7 @@ public class RegistryHandler {
     // Topaz
     public static final RegistryObject<Item> TOPAZ_BLOCK_ITEM = ITEMS.register("topaz_block", () -> new BlockItemBase(TOPAZ_BLOCK.get()));
     public static final RegistryObject<Item> TOPAZ_ORE_ITEM = ITEMS.register("topaz_ore", () -> new BlockItemBase(TOPAZ_ORE.get()));
-    // sky Blossom
+    // Sky Blossom
     public static final RegistryObject<Item> SKY_BLOSSOM_PLANKS_ITEM = ITEMS.register("sky_blossom_planks",
             () -> new BlockItemBase(SKY_BLOSSOM_PLANKS.get()));
     public static final RegistryObject<Item> SKY_BLOSSOM_LOG_ITEM = ITEMS.register("sky_blossom_log",
@@ -153,11 +153,23 @@ public class RegistryHandler {
         () -> new BlockItemBase(SKY_PASTURE.get()));
     public static final RegistryObject<Item> SKY_GRASS_ITEM = ITEMS.register("sky_grass",
             () -> new BlockItemBase(SKY_GRASS.get()));
+    // Lilac Blossom
+    public static final RegistryObject<Item> LILAC_BLOSSOM_PLANKS_ITEM = ITEMS.register("lilac_blossom_planks",
+            () -> new BlockItemBase(LILAC_BLOSSOM_PLANKS.get()));
+    public static final RegistryObject<Item> LILAC_BLOSSOM_LOG_ITEM = ITEMS.register("lilac_blossom_log",
+            () -> new BlockItemBase(LILAC_BLOSSOM_LOG.get()));
+    public static final RegistryObject<Item> STRIPPED_LILAC_BLOSSOM_LOG_ITEM = ITEMS.register("stripped_lilac_blossom_log",
+            () -> new BlockItemBase(STRIPPED_LILAC_BLOSSOM_LOG.get()));
+    public static final RegistryObject<Item> OOZING_LILAC_BLOSSOM_LOG_ITEM = ITEMS.register("oozing_lilac_blossom_log",
+            ()-> new BlockItemBase(OOZING_LILAC_BLOSSOM_LOG.get()));
+    public static final RegistryObject<Item> LILAC_BLOSSOM_LEAVES_ITEM = ITEMS.register("lilac_blossom_leaves",
+            () -> new BlockItemBase(LILAC_BLOSSOM_LEAVES.get()));
+    public static final RegistryObject<Item> LILAC_BLOSSOM_SAPLING_ITEM = ITEMS.register("lilac_blossom_sapling",
+            ()-> new BlockItemBase(LILAC_BLOSSOM_SAPLING.get()));
     public static final RegistryObject<Item> LILAC_PASTURE_ITEM = ITEMS.register("lilac_pasture",
             () -> new BlockItemBase(LILAC_PASTURE.get()));
     public static final RegistryObject<Item> LILAC_GRASS_ITEM = ITEMS.register("lilac_grass",
             () -> new BlockItemBase(LILAC_GRASS.get()));
-
 
     // Armor Material
     // -----------------------------------------------------------------------------------------------------------------
@@ -185,7 +197,7 @@ public class RegistryHandler {
         private final float toughness;
         private final LazyValue<Ingredient> repairMaterial;
 
-        private ModArmorMaterial(String nameIn, int maxDamageFactorIn,
+         ModArmorMaterial(String nameIn, int maxDamageFactorIn,
                                  int[] damageReductionAmountIn, int enchantabilityIn,
                                  SoundEvent soundEventIn, float toughnessIn,
                                  Supplier<Ingredient> repairMaterialIn){
