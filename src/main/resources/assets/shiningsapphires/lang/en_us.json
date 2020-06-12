@@ -1,0 +1,63 @@
+{
+  "itemGroup.ShinyTab": "Shining Sapphires",
+
+  "item.shiningsapphires.sapphire": "Sapphire",
+  "item.shiningsapphires.sapphire_sword": "Sapphire Sword",
+  "item.shiningsapphires.sapphire_rod": "Sapphire Rod",
+  "item.shiningsapphires.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.shiningsapphires.sapphire_axe": "Sapphire Axe",
+  "item.shiningsapphires.sapphire_shovel": "Sapphire Shovel",
+  "item.shiningsapphires.sapphire_hoe": "Sapphire Hoe",
+  "item.shiningsapphires.sapphire_helmet": "Sapphire Helmet",
+  "item.shiningsapphires.sapphire_chestplate": "Sapphire Chestplate",
+  "item.shiningsapphires.sapphire_leggings": "Sapphire Leggings",
+  "item.shiningsapphires.sapphire_boots": "Sapphire Boots",
+
+  "item.shiningsapphires.amethyst": "Amethyst",
+  "item.shiningsapphires.amethyst_sword": "Amethyst Sword",
+  "item.shiningsapphires.amethyst_rod": "Amethyst Rod",
+  "item.shiningsapphires.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.shiningsapphires.amethyst_axe": "Amethyst Axe",
+  "item.shiningsapphires.amethyst_shovel": "Amethyst Shovel",
+  "item.shiningsapphires.amethyst_hoe": "Amethyst Hoe",
+  "item.shiningsapphires.amethyst_helmet": "Amethyst Helmet",
+  "item.shiningsapphires.amethyst_chestplate": "Amethyst Chestplate",
+  "item.shiningsapphires.amethyst_leggings": "Amethyst Leggings",
+  "item.shiningsapphires.amethyst_boots": "Amethyst Boots",
+
+  "item.shiningsapphires.topaz": "Flame Topaz",
+  "item.shiningsapphires.topaz_sapphire_sword": "Flame Imbued Sapphire Sword",
+  "item.shiningsapphires.topaz_amethyst_sword": "Flame Imbued Amethyst Sword",
+  "item.shiningsapphires.topaz_sapphire_chestplate": "Flame Imbued Sapphire Chestplate",
+  "item.shiningsapphires.topaz_amethyst_chestplate": "Flame Imbued Amethyst Chestplate",
+
+  "item.shiningsapphires.sapphire_sap": "Sapphire Sap",
+
+
+  "block.shiningsapphires.sapphire_block": "Sapphire Block",
+  "block.shiningsapphires.sapphire_ore": "Sapphire Ore",
+
+  "block.shiningsapphires.amethyst_block": "Amethyst Block",
+  "block.shiningsapphires.amethyst_ore": "Amethyst Ore",
+
+  "block.shiningsapphires.topaz_block": "Flame Topaz Block",
+  "block.shiningsapphires.topaz_ore": "Flame Topaz Ore",
+
+  "block.shiningsapphires.sky_blossom_log": "Sky Blossom Log",
+  "block.shiningsapphires.sky_blossom_planks": "Sky Blossom Planks",
+  "block.shiningsapphires.sky_blossom_sapling": "Sky Blossom Sapling",
+  "block.shiningsapphires.sky_blossom_leaves": "Sky Blossom Leaves",
+  "block.shiningsapphires.stripped_sky_blossom_log": "Stripped Sky Blossom Log",
+  "block.shiningsapphires.oozing_sky_blossom_log": "Oozing Sky Blossom Log",
+  "block.shiningsapphires.sky_pasture": "Sky Pasture",
+  "block.shiningsapphires.sky_grass": "Sky Grass",
+
+  "block.shiningsapphires.lilac_blossom_log": "Lilac Blossom Log",
+  "block.shiningsapphires.lilac_blossom_planks": "Lilac Blossom Planks",
+  "block.shiningsapphires.lilac_blossom_sapling": "Lilac Blossom Sapling",
+  "block.shiningsapphires.lilac_blossom_leaves": "Lilac Blossom Leaves",
+  "block.shiningsapphires.stripped_lilac_blossom_log": "Stripped Lilac Blossom Log",
+  "block.shiningsapphires.oozing_lilac_blossom_log": "Oozing Lilac Blossom Log",
+  "block.shiningsapphires.lilac_pasture": "Lilac Pasture",
+  "block.shiningsapphires.lilac_grass": "Lilac Grass"
+}

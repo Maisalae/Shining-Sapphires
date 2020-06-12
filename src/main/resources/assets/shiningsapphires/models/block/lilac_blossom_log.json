@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "shiningsapphires:blocks/lilac_blossom_log_top",
+    "side": "shiningsapphires:blocks/lilac_blossom_log"
+  }
+}

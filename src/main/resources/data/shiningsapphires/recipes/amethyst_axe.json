@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "#/ ",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "item": "shiningsapphires:amethyst"
+    },
+    "/": {
+      "item": "shiningsapphires:amethyst_rod"
+    }
+  },
+  "result": {
+    "item": "shiningsapphires:amethyst_axe",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shiningsapphires:sky_blossom_log"
+    }
+  ],
+  "result": {
+    "item": "shiningsapphires:sky_blossom_planks",
+    "count": 4
+  }
+}

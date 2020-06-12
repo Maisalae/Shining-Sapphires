@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#/#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "shiningsapphires:topaz"
+    },
+    "/": {
+      "item": "shiningsapphires:amethyst_sword"
+    }
+  },
+  "result":
+  {
+    "item": "shiningsapphires:topaz_amethyst_sword",
+    "nbt": {
+      "ench": [
+        {
+          "id": 20,
+          "lvl": 1
+        }
+      ]
+    },
+    "count": 1
+  }
+}

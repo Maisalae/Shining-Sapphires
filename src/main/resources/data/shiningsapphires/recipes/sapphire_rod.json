@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "shiningsapphires:sapphire"
+    }
+  ],
+  "result":
+  {
+    "item": "shiningsapphires:sapphire_rod",
+    "count": 2
+  }
+}

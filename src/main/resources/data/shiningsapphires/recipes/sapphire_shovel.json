@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "/",
+    "/"
+  ],
+  "key": {
+    "#": {
+      "item": "shiningsapphires:sapphire"
+    },
+    "/": {
+      "item": "shiningsapphires:sapphire_rod"
+    }
+  },
+  "result": {
+    "item": "shiningsapphires:sapphire_shovel",
+    "count": 1
+  }
+}

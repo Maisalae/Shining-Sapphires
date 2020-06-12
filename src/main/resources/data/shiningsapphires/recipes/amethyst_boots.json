@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "shiningsapphires:amethyst"
+    }
+  },
+  "result": {
+    "item": "shiningsapphires:amethyst_boots",
+    "count": 1
+  }
+}

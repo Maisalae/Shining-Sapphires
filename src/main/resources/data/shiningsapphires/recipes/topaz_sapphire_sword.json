@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#/#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "shiningsapphires:topaz"
+    },
+    "/": {
+      "item": "shiningsapphires:sapphire_sword"
+    }
+  },
+  "result":
+  {
+    "item": "shiningsapphires:topaz_sapphire_sword",
+    "nbt": {
+      "ench": [
+        {
+          "id": 20,
+          "lvl": 1
+        }
+      ]
+    },
+    "count": 1
+  }
+}

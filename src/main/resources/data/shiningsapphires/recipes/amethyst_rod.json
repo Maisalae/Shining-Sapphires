@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "shiningsapphires:amethyst"
+    }
+  ],
+  "result":
+  {
+    "item": "shiningsapphires:amethyst_rod",
+    "count": 2
+  }
+}

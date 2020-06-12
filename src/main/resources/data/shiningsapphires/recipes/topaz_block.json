@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "shiningsapphires:topaz"
+    }
+  },
+  "result": {
+      "item": "shiningsapphires:topaz_block",
+      "count": 1
+  }
+}

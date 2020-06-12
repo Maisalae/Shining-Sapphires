@@ -1,0 +1,47 @@
+
+modLoader="javafml" #mandatory
+
+loaderVersion="[31,)" #mandatory
+
+[[mods]] #mandatory
+
+modId="shiningsapphires" #mandatory
+
+version="1.15.2-1.1.0" #mandatory
+
+displayName="Shining Sapphires" #mandatory
+
+displayURL="http://example.com/" #optional
+# A file name (in the root of the mod JAR) containing a logo for display
+logoFile="sapphire_logo.png" #optional
+logoBlur=false
+# A text field displayed in the mod UI
+credits="Thanks to my buddy Max for helping me with teething problems and creative choices! :)" #optional
+# A text field displayed in the mod UI
+authors="Yasmin Bettles" #optional
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+This mod adds new gemstones into the game! It also adds snazzy tools and armour with cool buffs!
+There is also a new dimension added with this mod - the Sakura!
+It's filled with beautiful creatures, gorgeous landscapes, and lots of treasures, if you know where to look for them!
+If you have any issues, please contact me on discord: Maisalae#3814 <3 happy crafting! :)
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.shiningsapphires]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[31,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+# Here's another dependency
+[[dependencies.shiningsapphires]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

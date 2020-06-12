@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "shiningsapphires:blocks/sky_blossom_sapling"
+  }
+}

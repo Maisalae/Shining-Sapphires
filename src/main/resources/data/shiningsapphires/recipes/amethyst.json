@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shiningsapphires:amethyst_block"
+    }
+  ],
+  "result": {
+    "item": "shiningsapphires:amethyst",
+    "count": 9
+  }
+}

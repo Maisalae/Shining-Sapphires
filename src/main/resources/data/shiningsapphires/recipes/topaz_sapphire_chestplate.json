@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#/#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "shiningsapphires:topaz"
+    },
+    "/": {
+      "item": "shiningsapphires:sapphire_chestplate"
+    }
+  },
+  "result": {
+      "item": "shiningsapphires:topaz_sapphire_chestplate",
+      "count": 1
+  }
+}

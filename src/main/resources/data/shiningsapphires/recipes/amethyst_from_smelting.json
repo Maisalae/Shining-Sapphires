@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "shiningsapphires:amethyst_ore"
+  },
+  "result": "shiningsapphires:amethyst",
+  "experience": 1.5,
+  "cookingtime": 200
+}
