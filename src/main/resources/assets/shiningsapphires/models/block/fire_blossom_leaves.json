@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "shiningsapphires:blocks/fire_blossom_leaves"
+  }
+}

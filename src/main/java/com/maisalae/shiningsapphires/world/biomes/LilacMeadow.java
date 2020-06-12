@@ -29,7 +29,7 @@ public class LilacMeadow extends Biome {
 
     public LilacMeadow() {
         super(new Builder()
-                .scale(0.15f).waterColor(15103710).waterFogColor(15767523).temperature(0.5f).precipitation(RainType.RAIN).category(Category.PLAINS)
+                .scale(0.25f).waterColor(15103710).waterFogColor(15767523).temperature(0.5f).precipitation(RainType.RAIN).category(Category.PLAINS)
                 .surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(RegistryHandler.LILAC_PASTURE.get().getDefaultState(),
                         Blocks.DIRT.getDefaultState(), Blocks.SAND.getDefaultState())).downfall(0.1f).depth(0.12f).parent(null));
 

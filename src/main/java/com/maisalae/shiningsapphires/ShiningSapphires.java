@@ -34,6 +34,7 @@ public class ShiningSapphires {
     public static final String MOD_ID = "shiningsapphires";
     public static final PlantType SKY = PlantType.create("sky");
     public static final PlantType LILAC = PlantType.create("lilac");
+    public static final PlantType FIRE = PlantType.create("fire");
 
     public ShiningSapphires() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -70,6 +71,9 @@ public class ShiningSapphires {
         RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_BLOSSOM_SAPLING.get(), RenderType.func_228643_e_());
         RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_BLOSSOM_LEAVES.get(), RenderType.func_228643_e_());
         RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_GRASS.get(),RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_BLOSSOM_SAPLING.get(), RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_BLOSSOM_LEAVES.get(), RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_GRASS.get(),RenderType.func_228643_e_());
     }
 
     @SubscribeEvent

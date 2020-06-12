@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "snowy=false": [
+      { "model": "shiningsapphires:block/fire_pasture" },
+      { "model": "shiningsapphires:block/fire_pasture", "y": 90 },
+      { "model": "shiningsapphires:block/fire_pasture", "y": 180 },
+      { "model": "shiningsapphires:block/fire_pasture", "y": 270 }
+    ],
+    "snowy=true":  { "model": "block/grass_block_snow" }
+  }
+}

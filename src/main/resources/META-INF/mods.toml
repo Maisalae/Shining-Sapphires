@@ -24,7 +24,7 @@ description='''
 This mod adds new gemstones into the game! It also adds snazzy tools and armour with cool buffs!
 There is also a new dimension added with this mod - the Sakura!
 It's filled with beautiful creatures, gorgeous landscapes, and lots of treasures, if you know where to look for them!
-If you have any issues, please contact me on discord: Maisalae#3814 <3 happy crafting! :)
+If you have any issues, please report them at: https://github.com/Maisalae/Shining-Sapphires/issues <3 happy crafting! :)
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.shiningsapphires]] #optional

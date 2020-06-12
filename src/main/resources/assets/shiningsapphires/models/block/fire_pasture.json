@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "block/dirt",
+    "bottom": "shiningsapphires:blocks/fire_pasture_bottom",
+    "top": "shiningsapphires:blocks/fire_pasture_top",
+    "side": "shiningsapphires:blocks/fire_pasture_side"
+  }
+}

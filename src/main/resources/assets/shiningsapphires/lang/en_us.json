@@ -32,7 +32,8 @@
   "item.shiningsapphires.topaz_amethyst_chestplate": "Flame Imbued Amethyst Chestplate",
 
   "item.shiningsapphires.sapphire_sap": "Sapphire Sap",
-
+  "item.shiningsapphires.amethyst_sap": "Amethyst Sap",
+  "item.shiningsapphires.topaz_sap": "Topaz Sap",
 
   "block.shiningsapphires.sapphire_block": "Sapphire Block",
   "block.shiningsapphires.sapphire_ore": "Sapphire Ore",
@@ -59,5 +60,14 @@
   "block.shiningsapphires.stripped_lilac_blossom_log": "Stripped Lilac Blossom Log",
   "block.shiningsapphires.oozing_lilac_blossom_log": "Oozing Lilac Blossom Log",
   "block.shiningsapphires.lilac_pasture": "Lilac Pasture",
-  "block.shiningsapphires.lilac_grass": "Lilac Grass"
+  "block.shiningsapphires.lilac_grass": "Lilac Grass",
+
+  "block.shiningsapphires.fire_blossom_log": "Fire Blossom Log",
+  "block.shiningsapphires.fire_blossom_planks": "Fire Blossom Planks",
+  "block.shiningsapphires.fire_blossom_sapling": "Fire Blossom Sapling",
+  "block.shiningsapphires.fire_blossom_leaves": "Fire Blossom Leaves",
+  "block.shiningsapphires.stripped_fire_blossom_log": "Stripped Fire Blossom Log",
+  "block.shiningsapphires.oozing_fire_blossom_log": "Oozing Fire Blossom Log",
+  "block.shiningsapphires.fire_pasture": "Fire Pasture",
+  "block.shiningsapphires.fire_grass": "Fire Grass"
 }

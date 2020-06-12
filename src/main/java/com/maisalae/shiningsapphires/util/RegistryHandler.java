@@ -80,7 +80,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TOPAZ_AMETHYST_SWORD = ITEMS.register("topaz_amethyst_sword", ItemTopazAmethystSword::new);
     // Blossom Trees
     public static final RegistryObject<Item> SAPPHIRE_SAP = ITEMS.register("sapphire_sap",ItemBase::new);
-
+    public static final RegistryObject<Item> AMETHYST_SAP = ITEMS.register("amethyst_sap",ItemBase::new);
+    public static final RegistryObject<Item> TOPAZ_SAP = ITEMS.register("topaz_sap", ItemBase::new);
 
     // Blocks
     // -----------------------------------------------------------------------------------------------------------------
@@ -124,6 +125,21 @@ public class RegistryHandler {
     public static final RegistryObject<Block> LILAC_PASTURE = BLOCKS.register("lilac_pasture", LilacPasture::new);
     public static final RegistryObject<Block> LILAC_GRASS = BLOCKS.register("lilac_grass",
             () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.PURPLE_TERRACOTTA).doesNotBlockMovement()));
+    // Fire Blossom
+    public static final RegistryObject<Block> FIRE_BLOSSOM_PLANKS = BLOCKS.register("fire_blossom_planks",
+            () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> FIRE_BLOSSOM_LOG = BLOCKS.register("fire_blossom_log",
+            () -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_FIRE_BLOSSOM_LOG = BLOCKS.register("stripped_fire_blossom_log",
+            () -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> OOZING_FIRE_BLOSSOM_LOG = BLOCKS.register("oozing_fire_blossom_log", OozingFireLog::new);
+    public static final RegistryObject<Block> FIRE_BLOSSOM_LEAVES = BLOCKS.register("fire_blossom_leaves",
+            () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> FIRE_BLOSSOM_SAPLING = BLOCKS.register("fire_blossom_sapling",
+            () -> new Block(Block.Properties.from(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> FIRE_PASTURE = BLOCKS.register("fire_pasture",FirePasture::new);
+    public static final RegistryObject<Block> FIRE_GRASS = BLOCKS.register("fire_grass",
+            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.ORANGE_TERRACOTTA).doesNotBlockMovement()));
 
     // Block Items
     // -----------------------------------------------------------------------------------------------------------------
@@ -170,6 +186,23 @@ public class RegistryHandler {
             () -> new BlockItemBase(LILAC_PASTURE.get()));
     public static final RegistryObject<Item> LILAC_GRASS_ITEM = ITEMS.register("lilac_grass",
             () -> new BlockItemBase(LILAC_GRASS.get()));
+    // Fire Blossom
+    public static final RegistryObject<Item> FIRE_BLOSSOM_PLANKS_ITEM = ITEMS.register("fire_blossom_planks",
+            () -> new BlockItemBase(FIRE_BLOSSOM_PLANKS.get()));
+    public static final RegistryObject<Item> FIRE_BLOSSOM_LOG_ITEM = ITEMS.register("fire_blossom_log",
+            () -> new BlockItemBase(FIRE_BLOSSOM_LOG.get()));
+    public static final RegistryObject<Item> STRIPPED_FIRE_BLOSSOM_LOG_ITEM = ITEMS.register("stripped_fire_blossom_log",
+            () -> new BlockItemBase(STRIPPED_FIRE_BLOSSOM_LOG.get()));
+    public static final RegistryObject<Item> OOZING_FIRE_BLOSSOM_LOG_ITEM = ITEMS.register("oozing_fire_blossom_log",
+            ()-> new BlockItemBase(OOZING_FIRE_BLOSSOM_LOG.get()));
+    public static final RegistryObject<Item> FIRE_BLOSSOM_LEAVES_ITEM = ITEMS.register("fire_blossom_leaves",
+            () -> new BlockItemBase(FIRE_BLOSSOM_LEAVES.get()));
+    public static final RegistryObject<Item> FIRE_BLOSSOM_SAPLING_ITEM = ITEMS.register("fire_blossom_sapling",
+            ()-> new BlockItemBase(FIRE_BLOSSOM_SAPLING.get()));
+    public static final RegistryObject<Item> FIRE_PASTURE_ITEM = ITEMS.register("fire_pasture",
+            () -> new BlockItemBase(FIRE_PASTURE.get()));
+    public static final RegistryObject<Item> FIRE_GRASS_ITEM = ITEMS.register("fire_grass",
+            () -> new BlockItemBase(FIRE_GRASS.get()));
 
     // Armor Material
     // -----------------------------------------------------------------------------------------------------------------

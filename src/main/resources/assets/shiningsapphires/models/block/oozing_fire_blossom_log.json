@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "shiningsapphires:blocks/oozing_fire_blossom_log",
+    "down": "shiningsapphires:blocks/oozing_fire_blossom_log_bottom",
+    "up": "shiningsapphires:blocks/oozing_fire_blossom_log_top",
+    "north": "shiningsapphires:blocks/oozing_fire_blossom_log",
+    "east": "shiningsapphires:blocks/oozing_fire_blossom_log",
+    "south": "shiningsapphires:blocks/oozing_fire_blossom_log",
+    "west": "shiningsapphires:blocks/oozing_fire_blossom_log"
+  }
+}
