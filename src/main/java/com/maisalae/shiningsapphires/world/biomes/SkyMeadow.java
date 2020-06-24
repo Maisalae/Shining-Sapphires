@@ -2,6 +2,7 @@ package com.maisalae.shiningsapphires.world.biomes;
 
 import com.google.common.collect.ImmutableSet;
 import com.maisalae.shiningsapphires.util.RegistryHandler;
+import com.maisalae.shiningsapphires.world.feature.SkyBlossomTree;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -18,6 +19,7 @@ import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
+import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.IPlacementConfig;
 import net.minecraft.world.gen.placement.Placement;
@@ -27,7 +29,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class SkyMeadow extends Biome {
-    public final BlockClusterFeatureConfig featureConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.SKY_GRASS.get().getDefaultState()), new SimpleBlockPlacer())).func_227315_a_(32).func_227322_d_();
+    public final BlockClusterFeatureConfig featureConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.SKY_GRASS.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
     public SkyMeadow() {
         super(new Biome.Builder()
                 .scale(0.25f).waterColor(7171049).waterFogColor(9015534).temperature(0.5f).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS)
@@ -36,7 +38,13 @@ public class SkyMeadow extends Biome {
         this.addSpawn(EntityClassification.AMBIENT, new SpawnListEntry(EntityType.CAT,5,2,5));
         this.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.14285715f)));
         DefaultBiomeFeatures.addExtraEmeraldOre(this);
-        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.field_227248_z_.func_225566_b_(featureConfig).func_227228_a_(Placement.COUNT_HEIGHTMAP_DOUBLE.func_227446_a_(new FrequencyConfig(5))));
+        DefaultBiomeFeatures.addOres(this);
+        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                Feature.RANDOM_PATCH.withConfiguration(featureConfig).withPlacement(
+                        Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(5))));
+        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                Feature.NORMAL_TREE.withConfiguration(SkyBlossomTree.SKY_BLOSSOM_TREE_CONFIG).withPlacement(
+                        Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(4, 0.1f, 1))));
     }
 
     @Override
@@ -49,8 +57,8 @@ public class SkyMeadow extends Biome {
         return false;
     }
     @OnlyIn(Dist.CLIENT)
-    public int func_225529_c_() {
-        return 0;
+    public int getSkyColor() {
+        return 7171049;
     }
 }
 

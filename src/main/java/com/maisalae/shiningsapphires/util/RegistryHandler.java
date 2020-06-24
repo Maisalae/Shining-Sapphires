@@ -3,6 +3,9 @@ package com.maisalae.shiningsapphires.util;
 import com.maisalae.shiningsapphires.ShiningSapphires;
 import com.maisalae.shiningsapphires.blocks.*;
 import com.maisalae.shiningsapphires.items.*;
+import com.maisalae.shiningsapphires.world.feature.FireBlossomTree;
+import com.maisalae.shiningsapphires.world.feature.LilacBlossomTree;
+import com.maisalae.shiningsapphires.world.feature.SkyBlossomTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -95,51 +98,51 @@ public class RegistryHandler {
     public static final RegistryObject<Block> TOPAZ_BLOCK = BLOCKS.register("topaz_block", TopazBlock::new);
     public static final RegistryObject<Block> TOPAZ_ORE = BLOCKS.register("topaz_ore", TopazOre::new);
     // Sky Blossom
+    public static final RegistryObject<Block> SKY_PASTURE = BLOCKS.register("sky_pasture",
+            SkyPasture::new);
+    public static final RegistryObject<Block> SKY_GRASS = BLOCKS.register("sky_grass",
+            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.LIGHT_BLUE_TERRACOTTA).doesNotBlockMovement()));
     public static final RegistryObject<Block> SKY_BLOSSOM_PLANKS = BLOCKS.register("sky_blossom_planks",
             () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> SKY_BLOSSOM_LOG = BLOCKS.register("sky_blossom_log",
-            () -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
+            () -> new StrippableSkyLog(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_SKY_BLOSSOM_LOG = BLOCKS.register("stripped_sky_blossom_log",
             () -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> OOZING_SKY_BLOSSOM_LOG = BLOCKS.register("oozing_sky_blossom_log", OozingSkyLog::new);
     public static final RegistryObject<Block> SKY_BLOSSOM_LEAVES = BLOCKS.register("sky_blossom_leaves",
             () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> SKY_BLOSSOM_SAPLING = BLOCKS.register("sky_blossom_sapling",
-            () -> new Block(Block.Properties.from(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> SKY_PASTURE = BLOCKS.register("sky_pasture",
-            SkyPasture::new);
-    public static final RegistryObject<Block> SKY_GRASS = BLOCKS.register("sky_grass",
-            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.LIGHT_BLUE_TERRACOTTA).doesNotBlockMovement()));
+            () -> new ModSaplingBlock(SkyBlossomTree::new, Block.Properties.from(Blocks.OAK_SAPLING), SKY_PASTURE.get()));
     // Lilac Blossom
+    public static final RegistryObject<Block> LILAC_PASTURE = BLOCKS.register("lilac_pasture", LilacPasture::new);
+    public static final RegistryObject<Block> LILAC_GRASS = BLOCKS.register("lilac_grass",
+            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.PURPLE_TERRACOTTA).doesNotBlockMovement()));
     public static final RegistryObject<Block> LILAC_BLOSSOM_PLANKS = BLOCKS.register("lilac_blossom_planks",
             () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> LILAC_BLOSSOM_LOG = BLOCKS.register("lilac_blossom_log",
-            () -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
+            () -> new StrippableLilacLog(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_LILAC_BLOSSOM_LOG = BLOCKS.register("stripped_lilac_blossom_log",
             () -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> OOZING_LILAC_BLOSSOM_LOG = BLOCKS.register("oozing_lilac_blossom_log", OozingLilacLog::new);
     public static final RegistryObject<Block> LILAC_BLOSSOM_LEAVES = BLOCKS.register("lilac_blossom_leaves",
             () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> LILAC_BLOSSOM_SAPLING = BLOCKS.register("lilac_blossom_sapling",
-            () -> new Block(Block.Properties.from(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> LILAC_PASTURE = BLOCKS.register("lilac_pasture", LilacPasture::new);
-    public static final RegistryObject<Block> LILAC_GRASS = BLOCKS.register("lilac_grass",
-            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.PURPLE_TERRACOTTA).doesNotBlockMovement()));
+            () -> new ModSaplingBlock(LilacBlossomTree::new, Block.Properties.from(Blocks.OAK_SAPLING), LILAC_PASTURE.get()));
     // Fire Blossom
+    public static final RegistryObject<Block> FIRE_PASTURE = BLOCKS.register("fire_pasture",FirePasture::new);
+    public static final RegistryObject<Block> FIRE_GRASS = BLOCKS.register("fire_grass",
+            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.ORANGE_TERRACOTTA).doesNotBlockMovement()));
     public static final RegistryObject<Block> FIRE_BLOSSOM_PLANKS = BLOCKS.register("fire_blossom_planks",
             () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> FIRE_BLOSSOM_LOG = BLOCKS.register("fire_blossom_log",
-            () -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
+            () -> new StrippableFireLog(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_FIRE_BLOSSOM_LOG = BLOCKS.register("stripped_fire_blossom_log",
             () -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<Block> OOZING_FIRE_BLOSSOM_LOG = BLOCKS.register("oozing_fire_blossom_log", OozingFireLog::new);
     public static final RegistryObject<Block> FIRE_BLOSSOM_LEAVES = BLOCKS.register("fire_blossom_leaves",
             () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> FIRE_BLOSSOM_SAPLING = BLOCKS.register("fire_blossom_sapling",
-            () -> new Block(Block.Properties.from(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> FIRE_PASTURE = BLOCKS.register("fire_pasture",FirePasture::new);
-    public static final RegistryObject<Block> FIRE_GRASS = BLOCKS.register("fire_grass",
-            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.ORANGE_TERRACOTTA).doesNotBlockMovement()));
+            () -> new ModSaplingBlock(FireBlossomTree::new, Block.Properties.from(Blocks.OAK_SAPLING), FIRE_PASTURE.get()));
 
     // Block Items
     // -----------------------------------------------------------------------------------------------------------------

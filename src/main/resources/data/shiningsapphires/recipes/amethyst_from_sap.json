@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shiningsapphires:amethyst_sap",
+      "count": 3
+    }
+  ],
+  "result": {
+    "item": "shiningsapphires:amethyst",
+    "count": 1
+  }
+}

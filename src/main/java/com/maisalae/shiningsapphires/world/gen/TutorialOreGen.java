@@ -28,21 +28,21 @@ public class TutorialOreGen {
 
 
             if(OreGenConfig.generate_sapphire.get()) {
-                customConfig = Placement.COUNT_RANGE.func_227446_a_(SAPPHIRE);
+                customConfig = Placement.COUNT_RANGE.configure(SAPPHIRE);
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.SAPPHIRE_ORE.get().getDefaultState(), MathHelper.nextInt(new Random(), 3, 8))).func_227228_a_(customConfig));
+                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.SAPPHIRE_ORE.get().getDefaultState(), MathHelper.nextInt(new Random(), 3, 8))).withPlacement(customConfig));
             }
 
             if(OreGenConfig.generate_topaz.get()) {
-                customConfig = Placement.COUNT_RANGE.func_227446_a_(TOPAZ);
+                customConfig = Placement.COUNT_RANGE.configure(TOPAZ);
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.TOPAZ_ORE.get().getDefaultState(), MathHelper.nextInt(new Random(), 2, 3))).func_227228_a_(customConfig));
+                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.TOPAZ_ORE.get().getDefaultState(), MathHelper.nextInt(new Random(), 2, 3))).withPlacement(customConfig));
             }
 
             if(OreGenConfig.generate_amethyst.get()) {
-                customConfig = Placement.COUNT_RANGE.func_227446_a_(AMETHYST);
+                customConfig = Placement.COUNT_RANGE.configure(AMETHYST);
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.AMETHYST_ORE.get().getDefaultState(), MathHelper.nextInt(new Random(), 3, 8))).func_227228_a_(customConfig));
+                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.AMETHYST_ORE.get().getDefaultState(), MathHelper.nextInt(new Random(), 3, 8))).withPlacement(customConfig));
             }
 
         }

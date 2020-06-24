@@ -65,15 +65,15 @@ public class ShiningSapphires {
 
     @SubscribeEvent
     public void doClientStuff(final FMLClientSetupEvent event) {
-        RenderTypeLookup.setRenderLayer(RegistryHandler.SKY_BLOSSOM_SAPLING.get(), RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(RegistryHandler.SKY_BLOSSOM_LEAVES.get(), RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(RegistryHandler.SKY_GRASS.get(),RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_BLOSSOM_SAPLING.get(), RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_BLOSSOM_LEAVES.get(), RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_GRASS.get(),RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_BLOSSOM_SAPLING.get(), RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_BLOSSOM_LEAVES.get(), RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_GRASS.get(),RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.SKY_BLOSSOM_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.SKY_BLOSSOM_LEAVES.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.SKY_GRASS.get(),RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_BLOSSOM_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_BLOSSOM_LEAVES.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_GRASS.get(),RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_BLOSSOM_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_BLOSSOM_LEAVES.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_GRASS.get(),RenderType.getCutout());
     }
 
     @SubscribeEvent

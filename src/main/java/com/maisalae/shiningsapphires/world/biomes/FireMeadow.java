@@ -1,6 +1,7 @@
 package com.maisalae.shiningsapphires.world.biomes;
 
 import com.maisalae.shiningsapphires.util.RegistryHandler;
+import com.maisalae.shiningsapphires.world.feature.FireBlossomTree;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -15,6 +16,7 @@ import net.minecraft.world.gen.carver.WorldCarver;
 import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
+import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
@@ -23,16 +25,22 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class FireMeadow extends Biome {
-    public final BlockClusterFeatureConfig featureConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.FIRE_GRASS.get().getDefaultState()), new SimpleBlockPlacer())).func_227315_a_(32).func_227322_d_();
+    public final BlockClusterFeatureConfig featureConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.FIRE_GRASS.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
     public FireMeadow() {
         super(new Builder()
                 .scale(0.25f).waterColor(16020876).waterFogColor(15700102).temperature(1.0f).precipitation(RainType.NONE).category(Category.DESERT)
                 .surfaceBuilder(SurfaceBuilder.DEFAULT,new SurfaceBuilderConfig(RegistryHandler.FIRE_PASTURE.get().getDefaultState(),
-                        Blocks.DIRT.getDefaultState(),Blocks.GRAVEL.getDefaultState())).downfall(0.1f).depth(0.1f).parent(null));
+                        Blocks.DIRT.getDefaultState(),Blocks.GRAVEL.getDefaultState())).downfall(0.0f).depth(0.1f).parent(null));
         this.addSpawn(EntityClassification.AMBIENT, new SpawnListEntry(EntityType.OCELOT,5,2,5));
         this.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.14285715f)));
         DefaultBiomeFeatures.addExtraEmeraldOre(this);
-        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.field_227248_z_.func_225566_b_(featureConfig).func_227228_a_(Placement.COUNT_HEIGHTMAP_DOUBLE.func_227446_a_(new FrequencyConfig(5))));
+        DefaultBiomeFeatures.addOres(this);
+        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                Feature.RANDOM_PATCH.withConfiguration(featureConfig).withPlacement(
+                        Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(5))));
+        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                Feature.NORMAL_TREE.withConfiguration(FireBlossomTree.FIRE_BLOSSOM_TREE_CONFIG).withPlacement(
+                        Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(4, 0.1f, 1))));
     }
 
     @Override
@@ -45,8 +53,8 @@ public class FireMeadow extends Biome {
         return false;
     }
     @OnlyIn(Dist.CLIENT)
-    public int func_225529_c_() {
-        return 0;
+    public int getSkyColor() {
+        return 16020876;
     }
 }
 
