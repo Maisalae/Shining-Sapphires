@@ -74,6 +74,7 @@ public class ShiningSapphires {
         RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_BLOSSOM_SAPLING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_BLOSSOM_LEAVES.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_GRASS.get(),RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.SWIRLING_VINES.get(), RenderType.getCutout());
     }
 
     @SubscribeEvent

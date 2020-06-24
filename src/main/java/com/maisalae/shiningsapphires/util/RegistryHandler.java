@@ -23,6 +23,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import sun.awt.SunHints;
 
 import java.util.function.Supplier;
 
@@ -101,7 +102,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> SKY_PASTURE = BLOCKS.register("sky_pasture",
             SkyPasture::new);
     public static final RegistryObject<Block> SKY_GRASS = BLOCKS.register("sky_grass",
-            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.LIGHT_BLUE_TERRACOTTA).doesNotBlockMovement()));
+            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.LIGHT_BLUE_TERRACOTTA).doesNotBlockMovement(), ShiningSapphires.SKY));
     public static final RegistryObject<Block> SKY_BLOSSOM_PLANKS = BLOCKS.register("sky_blossom_planks",
             () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> SKY_BLOSSOM_LOG = BLOCKS.register("sky_blossom_log",
@@ -113,10 +114,12 @@ public class RegistryHandler {
             () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> SKY_BLOSSOM_SAPLING = BLOCKS.register("sky_blossom_sapling",
             () -> new ModSaplingBlock(SkyBlossomTree::new, Block.Properties.from(Blocks.OAK_SAPLING), SKY_PASTURE.get()));
+    public static final RegistryObject<Block> SWIRLING_VINES = BLOCKS.register("swirling_vines",
+            () -> new ModDoublePlantBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.PURPLE_TERRACOTTA).doesNotBlockMovement(), ShiningSapphires.SKY));
     // Lilac Blossom
     public static final RegistryObject<Block> LILAC_PASTURE = BLOCKS.register("lilac_pasture", LilacPasture::new);
     public static final RegistryObject<Block> LILAC_GRASS = BLOCKS.register("lilac_grass",
-            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.PURPLE_TERRACOTTA).doesNotBlockMovement()));
+            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.PURPLE_TERRACOTTA).doesNotBlockMovement(), ShiningSapphires.LILAC));
     public static final RegistryObject<Block> LILAC_BLOSSOM_PLANKS = BLOCKS.register("lilac_blossom_planks",
             () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> LILAC_BLOSSOM_LOG = BLOCKS.register("lilac_blossom_log",
@@ -131,7 +134,7 @@ public class RegistryHandler {
     // Fire Blossom
     public static final RegistryObject<Block> FIRE_PASTURE = BLOCKS.register("fire_pasture",FirePasture::new);
     public static final RegistryObject<Block> FIRE_GRASS = BLOCKS.register("fire_grass",
-            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.ORANGE_TERRACOTTA).doesNotBlockMovement()));
+            () -> new ModBushBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.ORANGE_TERRACOTTA).doesNotBlockMovement(), ShiningSapphires.FIRE));
     public static final RegistryObject<Block> FIRE_BLOSSOM_PLANKS = BLOCKS.register("fire_blossom_planks",
             () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> FIRE_BLOSSOM_LOG = BLOCKS.register("fire_blossom_log",
@@ -169,9 +172,11 @@ public class RegistryHandler {
     public static final RegistryObject<Item> SKY_BLOSSOM_SAPLING_ITEM = ITEMS.register("sky_blossom_sapling",
             ()-> new BlockItemBase(SKY_BLOSSOM_SAPLING.get()));
     public static final RegistryObject<Item> SKY_PASTURE_ITEM = ITEMS.register("sky_pasture",
-        () -> new BlockItemBase(SKY_PASTURE.get()));
+            () -> new BlockItemBase(SKY_PASTURE.get()));
     public static final RegistryObject<Item> SKY_GRASS_ITEM = ITEMS.register("sky_grass",
             () -> new BlockItemBase(SKY_GRASS.get()));
+    public static final RegistryObject<Item> SWIRLING_VINES_ITEM = ITEMS.register("swirling_vines",
+            () -> new BlockItemBase(SWIRLING_VINES.get()));
     // Lilac Blossom
     public static final RegistryObject<Item> LILAC_BLOSSOM_PLANKS_ITEM = ITEMS.register("lilac_blossom_planks",
             () -> new BlockItemBase(LILAC_BLOSSOM_PLANKS.get()));

@@ -1,5 +1,6 @@
 package com.maisalae.shiningsapphires.world.biomes;
 
+import com.maisalae.shiningsapphires.util.ModTallFlowerPlacer;
 import com.maisalae.shiningsapphires.util.RegistryHandler;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
@@ -9,6 +10,7 @@ import net.minecraft.world.IWorldReader;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.blockplacer.DoublePlantBlockPlacer;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.carver.WorldCarver;
@@ -27,6 +29,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class SkyFlowerMeadow extends Biome {
     public final BlockClusterFeatureConfig grassConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.SKY_GRASS.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
+    public final BlockClusterFeatureConfig vinesConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.SWIRLING_VINES.get().getDefaultState()), new ModTallFlowerPlacer())).tries(64).func_227317_b_().build();
     public SkyFlowerMeadow() {
         super(new Biome.Builder()
                 .scale(0.25f).waterColor(7171049).waterFogColor(9015534).temperature(0.5f).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS)
@@ -47,10 +50,14 @@ public class SkyFlowerMeadow extends Biome {
         DefaultBiomeFeatures.addSedimentDisks(this);
         DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addOres(this);
+        // grass
         this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
                 Feature.RANDOM_PATCH.withConfiguration(grassConfig).withPlacement(
                         Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(5))));
-       // add flowers here once they exist
+       // swirling vines
+        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                Feature.RANDOM_PATCH.withConfiguration(vinesConfig).withPlacement(
+                        Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(1))));
     }
 
     @Override

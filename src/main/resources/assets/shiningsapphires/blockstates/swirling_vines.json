@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=lower": { "model": "shiningsapphires:block/swirling_vines_bottom" },
+    "half=upper":    { "model": "shiningsapphires:block/swirling_vines_top" }
+  }
+}

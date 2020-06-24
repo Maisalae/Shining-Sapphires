@@ -14,18 +14,28 @@ import net.minecraft.world.IWorldReader;
 import net.minecraftforge.common.PlantType;
 
 public class ModBushBlock extends Block implements net.minecraftforge.common.IPlantable {
-    public ModBushBlock(Block.Properties properties) {
+    private PlantType plantType;
+    public ModBushBlock(Block.Properties properties, PlantType plantTypeIn) {
         super(properties);
+        this.plantType = plantTypeIn;
     }
 
     @Override
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-        return ShiningSapphires.SKY;
+        return plantType;
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
         Block block = state.getBlock();
-        return block == RegistryHandler.SKY_PASTURE.get();
+        if(plantType == ShiningSapphires.SKY){
+            return block == RegistryHandler.SKY_PASTURE.get();
+        } else if (plantType == ShiningSapphires.LILAC) {
+            return block == RegistryHandler.LILAC_PASTURE.get();
+        } else if (plantType == ShiningSapphires.FIRE) {
+            return block == RegistryHandler.FIRE_PASTURE.get();
+        } else {
+            return false;
+        }
     }
     @Override
     public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
@@ -53,5 +63,10 @@ public class ModBushBlock extends Block implements net.minecraftforge.common.IPl
         BlockState state = world.getBlockState(pos);
         if (state.getBlock() != this) return getDefaultState();
         return state;
+    }
+
+    @Override
+    public OffsetType getOffsetType() {
+        return OffsetType.XZ;
     }
 }
