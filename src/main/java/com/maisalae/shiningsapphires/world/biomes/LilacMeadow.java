@@ -25,7 +25,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class LilacMeadow extends Biome {
-    public final BlockClusterFeatureConfig featureConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.LILAC_GRASS.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
+    public final BlockClusterFeatureConfig grassConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.LILAC_GRASS.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
 
     public LilacMeadow() {
         super(new Builder()
@@ -33,12 +33,12 @@ public class LilacMeadow extends Biome {
                 .surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(RegistryHandler.LILAC_PASTURE.get().getDefaultState(),
                         Blocks.DIRT.getDefaultState(), Blocks.SAND.getDefaultState())).downfall(0.1f).depth(0.12f).parent(null));
 
-        this.addSpawn(EntityClassification.AMBIENT, new SpawnListEntry(EntityType.CAT, 5, 2, 5));
+        this.addSpawn(EntityClassification.AMBIENT, new SpawnListEntry(EntityType.OCELOT, 5, 2, 5));
         this.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.14285715f)));
         DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addOres(this);
         this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-                Feature.RANDOM_PATCH.withConfiguration(featureConfig).withPlacement(
+                Feature.RANDOM_PATCH.withConfiguration(grassConfig).withPlacement(
                         Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(5))));
         this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
                 Feature.ACACIA_TREE.withConfiguration(LilacBlossomTree.LILAC_BLOSSOM_TREE_CONFIG).withPlacement(
