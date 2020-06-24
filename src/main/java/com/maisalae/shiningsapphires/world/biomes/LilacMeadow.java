@@ -15,7 +15,10 @@ import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.carver.WorldCarver;
 import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.feature.ProbabilityConfig;
+import net.minecraft.world.gen.feature.structure.MineshaftConfig;
+import net.minecraft.world.gen.feature.structure.MineshaftStructure;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.Placement;
@@ -32,9 +35,15 @@ public class LilacMeadow extends Biome {
                 .scale(0.25f).waterColor(15103710).waterFogColor(15767523).temperature(0.5f).precipitation(RainType.RAIN).category(Category.PLAINS)
                 .surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(RegistryHandler.LILAC_PASTURE.get().getDefaultState(),
                         Blocks.DIRT.getDefaultState(), Blocks.SAND.getDefaultState())).downfall(0.1f).depth(0.12f).parent(null));
-
+        this.addStructure(Feature.MINESHAFT.withConfiguration(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
+        this.addStructure(Feature.STRONGHOLD.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG));
         this.addSpawn(EntityClassification.AMBIENT, new SpawnListEntry(EntityType.OCELOT, 5, 2, 5));
+        this.addSpawn(EntityClassification.AMBIENT, new Biome.SpawnListEntry(EntityType.BAT, 10, 8, 8));
+        this.addSpawn(EntityClassification.AMBIENT, new SpawnListEntry(EntityType.TROPICAL_FISH,5, 3, 10));
         this.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.14285715f)));
+        DefaultBiomeFeatures.addSedimentDisks(this);
+        DefaultBiomeFeatures.addStoneVariants(this);
+        DefaultBiomeFeatures.addSprings(this);
         DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addOres(this);
         this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
