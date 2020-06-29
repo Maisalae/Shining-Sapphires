@@ -34,15 +34,12 @@ public class StrippableSkyLog extends LogBlock {
                     || item == Items.STONE_AXE || item == RegistryHandler.SAPPHIRE_AXE.get()
                     || item == RegistryHandler.AMETHYST_AXE.get()) {
                 if (state.get(AXIS) == Direction.Axis.X){
-                    System.out.println("X axis");
                     oozingState = RegistryHandler.OOZING_SKY_BLOSSOM_LOG.get().getDefaultState().with(AXIS, Direction.Axis.X);
                     strippedState = RegistryHandler.STRIPPED_SKY_BLOSSOM_LOG.get().getDefaultState().with(AXIS, Direction.Axis.X);
                 } else if (state.get(AXIS) == Direction.Axis.Z){
-                    System.out.println("Z axis");
                     oozingState =  RegistryHandler.OOZING_SKY_BLOSSOM_LOG.get().getDefaultState().with(AXIS, Direction.Axis.Z);
                     strippedState = RegistryHandler.STRIPPED_SKY_BLOSSOM_LOG.get().getDefaultState().with(AXIS, Direction.Axis.Z);
                 } else {
-                    System.out.println("Y axis");
                     oozingState = RegistryHandler.OOZING_SKY_BLOSSOM_LOG.get().getDefaultState();
                     strippedState = RegistryHandler.STRIPPED_SKY_BLOSSOM_LOG.get().getDefaultState();
                 }

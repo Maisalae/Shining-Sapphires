@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shiningsapphires:stripped_fire_blossom_log"
+    }
+  ],
+  "result": {
+    "item": "shiningsapphires:fire_blossom_planks",
+    "count": 4
+  }
+}
