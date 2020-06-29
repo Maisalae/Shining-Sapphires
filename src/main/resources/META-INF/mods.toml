@@ -7,7 +7,7 @@ loaderVersion="[31,)" #mandatory
 
 modId="shiningsapphires" #mandatory
 
-version="1.15.2-1.2.0" #mandatory
+version="1.15.2-1.2.1" #mandatory
 
 displayName="Shining Sapphires" #mandatory
 
@@ -26,7 +26,7 @@ There is also a new dimension added with this mod - the Sakura!
 It's filled with beautiful creatures, gorgeous landscapes, and lots of treasures, if you know where to look for them!
 If you have any issues, please report them at: https://github.com/Maisalae/Shining-Sapphires/issues <3 happy crafting! :)
 NOTE: SAKURA DIMENSION AND CREATURES ARE NOT CURRENTLY IMPLEMENTED
-THIS MOD IS IN
+THIS MOD IS IN BETA
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.shiningsapphires]] #optional
