@@ -2,8 +2,7 @@ package com.maisalae.shiningsapphires.world.biomes;
 
 import com.maisalae.shiningsapphires.util.ModTallFlowerPlacer;
 import com.maisalae.shiningsapphires.util.RegistryHandler;
-import com.maisalae.shiningsapphires.world.feature.LargeSkyBlossomTree;
-import com.maisalae.shiningsapphires.world.feature.SkyBlossomTree;
+import com.maisalae.shiningsapphires.world.feature.FireBlossomTree;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -12,7 +11,6 @@ import net.minecraft.world.IWorldReader;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.blockplacer.DoublePlantBlockPlacer;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.carver.WorldCarver;
@@ -31,37 +29,37 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class SkyFlowerMeadow extends Biome {
-    public final BlockClusterFeatureConfig grassConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.SKY_GRASS.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
-    public final BlockClusterFeatureConfig vinesConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.SWIRLING_VINES.get().getDefaultState()), new ModTallFlowerPlacer())).tries(64).func_227317_b_().build();
-    public SkyFlowerMeadow() {
+public class FireFlowerMeadow extends Biome{
+    public final BlockClusterFeatureConfig grassConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.FIRE_GRASS.get().getDefaultState()), new SimpleBlockPlacer())).tries(32).build();
+    public final BlockClusterFeatureConfig sproutConfig = (new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(RegistryHandler.BLAZE_SPROUT.get().getDefaultState()), new ModTallFlowerPlacer())).tries(64).func_227317_b_().build();
+
+    public FireFlowerMeadow() {
         super(new Biome.Builder()
-                .scale(0.05f).waterColor(7171049).waterFogColor(9015534).temperature(0.5f).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS)
-                .surfaceBuilder(SurfaceBuilder.DEFAULT,new SurfaceBuilderConfig(RegistryHandler.SKY_PASTURE.get().getDefaultState(),
-                        Blocks.DIRT.getDefaultState(),Blocks.GRAVEL.getDefaultState())).downfall(0.1f).depth(0.09f).parent("sky_meadow"));
+                .scale(0.05f).waterColor(16020876).waterFogColor(15700102).temperature(1.0f).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT)
+                .surfaceBuilder(SurfaceBuilder.DEFAULT,new SurfaceBuilderConfig(RegistryHandler.FIRE_PASTURE.get().getDefaultState(),
+                        Blocks.DIRT.getDefaultState(),Blocks.GRAVEL.getDefaultState())).downfall(0.0f).depth(0.1f).parent("fire_meadow"));
         this.addStructure(Feature.MINESHAFT.withConfiguration(new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL)));
         this.addFeature(GenerationStage.Decoration.UNDERGROUND_STRUCTURES, Feature.STRONGHOLD.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-        this.addSpawn(EntityClassification.AMBIENT, new SpawnListEntry(EntityType.OCELOT,5,2,5));
+        this.addSpawn(EntityClassification.AMBIENT, new Biome.SpawnListEntry(EntityType.OCELOT,5,2,5));
         this.addSpawn(EntityClassification.AMBIENT, new Biome.SpawnListEntry(EntityType.BAT, 10, 8, 8));
-        this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.RABBIT, 4, 2, 3));
-        this.addSpawn(EntityClassification.AMBIENT, new SpawnListEntry(EntityType.TROPICAL_FISH,5, 3, 10));
+        this.addSpawn(EntityClassification.AMBIENT, new Biome.SpawnListEntry(EntityType.TROPICAL_FISH,5, 3, 10));
         this.addCarver(GenerationStage.Carving.AIR, Biome.createCarver(WorldCarver.CAVE, new ProbabilityConfig(0.14285715f)));
+        DefaultBiomeFeatures.addSedimentDisks(this);
         DefaultBiomeFeatures.addSprings(this);
         DefaultBiomeFeatures.addStoneVariants(this);
-        DefaultBiomeFeatures.addSedimentDisks(this);
         DefaultBiomeFeatures.addExtraEmeraldOre(this);
         DefaultBiomeFeatures.addOres(this);
-        // normal sky blossom tree
-        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-                Feature.NORMAL_TREE.withConfiguration(SkyBlossomTree.SKY_BLOSSOM_TREE_CONFIG).withPlacement(
-                        Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(1, 0.1f, 1))));
         // grass
         this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
                 Feature.RANDOM_PATCH.withConfiguration(grassConfig).withPlacement(
                         Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(5))));
-       // swirling vines
+        // trees
         this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-                Feature.RANDOM_PATCH.withConfiguration(vinesConfig).withPlacement(
+                Feature.NORMAL_TREE.withConfiguration(FireBlossomTree.FIRE_BLOSSOM_TREE_CONFIG).withPlacement(
+                        Placement.COUNT_EXTRA_HEIGHTMAP.configure(new AtSurfaceWithExtraConfig(1, 0.1f, 1))));
+        // blaze sprout
+        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                Feature.RANDOM_PATCH.withConfiguration(sproutConfig).withPlacement(
                         Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(3))));
     }
 
@@ -76,7 +74,6 @@ public class SkyFlowerMeadow extends Biome {
     }
     @OnlyIn(Dist.CLIENT)
     public int getSkyColor() {
-        return 7171049;
+        return 16020876;
     }
 }
-

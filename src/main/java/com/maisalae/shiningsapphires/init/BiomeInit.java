@@ -17,6 +17,8 @@ public class BiomeInit {
     public static final RegistryObject<Biome> FIRE_MEADOW = BIOMES.register("fire_meadow", FireMeadow::new);
     public static final RegistryObject<Biome> SKY_FLOWER_MEADOW = BIOMES.register("sky_flower_meadow", SkyFlowerMeadow::new);
     public static final RegistryObject<Biome> SKY_MEADOW_PLAINS = BIOMES.register("sky_meadow_plains", SkyMeadowPlains::new);
+    public static final RegistryObject<Biome> FIRE_FLOWER_MEADOW = BIOMES.register("fire_flower_meadow", FireFlowerMeadow::new);
+    public static final RegistryObject<Biome> LILAC_FLOWER_MEADOW = BIOMES.register("lilac_flower_meadow", LilacFlowerMeadow::new);
 
 
     public static void registerBiomes() {
@@ -25,6 +27,8 @@ public class BiomeInit {
         registerHotBiome(FIRE_MEADOW.get(), BiomeDictionary.Type.OVERWORLD, BiomeDictionary.Type.MODIFIED, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.FOREST);
         registerCoolBiome(SKY_FLOWER_MEADOW.get(), BiomeDictionary.Type.OVERWORLD, BiomeDictionary.Type.MODIFIED, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.PLAINS);
         registerCoolBiome(SKY_MEADOW_PLAINS.get(), BiomeDictionary.Type.OVERWORLD, BiomeDictionary.Type.MODIFIED, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.PLAINS);
+        registerHotBiome(FIRE_FLOWER_MEADOW.get(), BiomeDictionary.Type.OVERWORLD, BiomeDictionary.Type.MODIFIED, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.PLAINS);
+        registerCoolBiome(LILAC_FLOWER_MEADOW.get(), BiomeDictionary.Type.OVERWORLD, BiomeDictionary.Type.MODIFIED, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.PLAINS);
     }
 
     private static void registerCoolBiome(Biome biome, BiomeDictionary.Type... types) {

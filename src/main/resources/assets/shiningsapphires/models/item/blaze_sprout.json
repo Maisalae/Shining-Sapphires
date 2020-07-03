@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "shiningsapphires:blocks/blaze_sprout_top"
+  }
+}

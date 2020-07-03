@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=lower": { "model": "shiningsapphires:block/violet_bloom_bottom" },
+    "half=upper":    { "model": "shiningsapphires:block/violet_bloom_top" }
+  }
+}

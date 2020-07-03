@@ -62,6 +62,7 @@
   "block.shiningsapphires.oozing_lilac_blossom_log": "Oozing Lilac Blossom Log",
   "block.shiningsapphires.lilac_pasture": "Lilac Pasture",
   "block.shiningsapphires.lilac_grass": "Lilac Grass",
+  "block.shiningsapphires.violet_bloom": "Violet Bloom",
 
   "block.shiningsapphires.fire_blossom_log": "Fire Blossom Log",
   "block.shiningsapphires.fire_blossom_planks": "Fire Blossom Planks",
@@ -70,5 +71,6 @@
   "block.shiningsapphires.stripped_fire_blossom_log": "Stripped Fire Blossom Log",
   "block.shiningsapphires.oozing_fire_blossom_log": "Oozing Fire Blossom Log",
   "block.shiningsapphires.fire_pasture": "Fire Pasture",
-  "block.shiningsapphires.fire_grass": "Fire Grass"
+  "block.shiningsapphires.fire_grass": "Fire Grass",
+  "block.shiningsapphires.blaze_sprout": "Blaze Sprout"
 }

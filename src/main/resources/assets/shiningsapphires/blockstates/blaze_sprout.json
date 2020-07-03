@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=lower": { "model": "shiningsapphires:block/blaze_sprout_bottom" },
+    "half=upper":    { "model": "shiningsapphires:block/blaze_sprout_top" }
+  }
+}

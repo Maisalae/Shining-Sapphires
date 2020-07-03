@@ -115,7 +115,7 @@ public class RegistryHandler {
     public static final RegistryObject<Block> SKY_BLOSSOM_SAPLING = BLOCKS.register("sky_blossom_sapling",
             () -> new ModSaplingBlock(SkyBlossomTree::new, Block.Properties.from(Blocks.OAK_SAPLING), SKY_PASTURE.get()));
     public static final RegistryObject<Block> SWIRLING_VINES = BLOCKS.register("swirling_vines",
-            () -> new ModDoublePlantBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.PURPLE_TERRACOTTA).doesNotBlockMovement(), ShiningSapphires.SKY));
+            () -> new ModDoublePlantBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.LIGHT_BLUE_TERRACOTTA).doesNotBlockMovement(), ShiningSapphires.SKY));
     // Lilac Blossom
     public static final RegistryObject<Block> LILAC_PASTURE = BLOCKS.register("lilac_pasture", LilacPasture::new);
     public static final RegistryObject<Block> LILAC_GRASS = BLOCKS.register("lilac_grass",
@@ -131,6 +131,8 @@ public class RegistryHandler {
             () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> LILAC_BLOSSOM_SAPLING = BLOCKS.register("lilac_blossom_sapling",
             () -> new ModSaplingBlock(LilacBlossomTree::new, Block.Properties.from(Blocks.OAK_SAPLING), LILAC_PASTURE.get()));
+    public static final RegistryObject<Block> VIOLET_BLOOM = BLOCKS.register("violet_bloom",
+            () -> new ModDoublePlantBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.PURPLE_TERRACOTTA).doesNotBlockMovement(),ShiningSapphires.LILAC));
     // Fire Blossom
     public static final RegistryObject<Block> FIRE_PASTURE = BLOCKS.register("fire_pasture",FirePasture::new);
     public static final RegistryObject<Block> FIRE_GRASS = BLOCKS.register("fire_grass",
@@ -146,7 +148,8 @@ public class RegistryHandler {
             () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> FIRE_BLOSSOM_SAPLING = BLOCKS.register("fire_blossom_sapling",
             () -> new ModSaplingBlock(FireBlossomTree::new, Block.Properties.from(Blocks.OAK_SAPLING), FIRE_PASTURE.get()));
-
+    public static final RegistryObject<Block> BLAZE_SPROUT = BLOCKS.register("blaze_sprout",
+            () -> new ModDoublePlantBlock(Block.Properties.create(Material.ORGANIC, MaterialColor.ORANGE_TERRACOTTA).doesNotBlockMovement(), ShiningSapphires.FIRE));
     // Block Items
     // -----------------------------------------------------------------------------------------------------------------
     // Sapphire
@@ -189,11 +192,13 @@ public class RegistryHandler {
     public static final RegistryObject<Item> LILAC_BLOSSOM_LEAVES_ITEM = ITEMS.register("lilac_blossom_leaves",
             () -> new BlockItemBase(LILAC_BLOSSOM_LEAVES.get()));
     public static final RegistryObject<Item> LILAC_BLOSSOM_SAPLING_ITEM = ITEMS.register("lilac_blossom_sapling",
-            ()-> new BlockItemBase(LILAC_BLOSSOM_SAPLING.get()));
+            () -> new BlockItemBase(LILAC_BLOSSOM_SAPLING.get()));
     public static final RegistryObject<Item> LILAC_PASTURE_ITEM = ITEMS.register("lilac_pasture",
             () -> new BlockItemBase(LILAC_PASTURE.get()));
     public static final RegistryObject<Item> LILAC_GRASS_ITEM = ITEMS.register("lilac_grass",
             () -> new BlockItemBase(LILAC_GRASS.get()));
+    public static final RegistryObject<Item> VIOLET_BLOOM_ITEM = ITEMS.register("violet_bloom",
+            () -> new BlockItemBase(VIOLET_BLOOM.get()));
     // Fire Blossom
     public static final RegistryObject<Item> FIRE_BLOSSOM_PLANKS_ITEM = ITEMS.register("fire_blossom_planks",
             () -> new BlockItemBase(FIRE_BLOSSOM_PLANKS.get()));
@@ -211,6 +216,8 @@ public class RegistryHandler {
             () -> new BlockItemBase(FIRE_PASTURE.get()));
     public static final RegistryObject<Item> FIRE_GRASS_ITEM = ITEMS.register("fire_grass",
             () -> new BlockItemBase(FIRE_GRASS.get()));
+    public static final RegistryObject<Item> BLAZE_SPROUT_ITEM = ITEMS.register("blaze_sprout",
+            () -> new BlockItemBase(BLAZE_SPROUT.get()));
 
     // Armor Material
     // -----------------------------------------------------------------------------------------------------------------
