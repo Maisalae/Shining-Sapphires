@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "shiningsapphires:block/fire_blossom_slab" },
+    "type=top": { "model": "shiningsapphires:block/fire_blossom_slab_top" },
+    "type=double": { "model": "shiningsapphires:block/fire_blossom_planks" }
+  }
+}

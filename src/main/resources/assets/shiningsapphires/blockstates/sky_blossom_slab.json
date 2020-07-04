@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "shiningsapphires:block/sky_blossom_slab" },
+    "type=top": { "model": "shiningsapphires:block/sky_blossom_slab_top" },
+    "type=double": { "model": "shiningsapphires:block/sky_blossom_planks" }
+  }
+}
