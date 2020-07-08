@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "shiningsapphires:blocks/sky_blossom_planks",
+    "top": "shiningsapphires:blocks/sky_blossom_planks",
+    "side": "shiningsapphires:blocks/sky_blossom_planks"
+  }
+}

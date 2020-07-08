@@ -1,0 +1,32 @@
+{
+  "parent": "shiningsapphires:recipes/root",
+  "rewards": {
+    "recipes": [
+      "shiningsapphires:amethyst"
+    ]
+  },
+  "criteria": {
+    "has_amethyst": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "shiningsapphires:amethyst_sap"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "shiningsapphires:amethyst"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_amethyst",
+      "has_the_recipe"
+    ]
+  ]
+}

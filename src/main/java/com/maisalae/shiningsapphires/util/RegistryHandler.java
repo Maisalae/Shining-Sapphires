@@ -107,6 +107,10 @@ public class RegistryHandler {
             () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> SKY_BLOSSOM_SLAB = BLOCKS.register("sky_blossom_slab",
             () -> new SlabBlock(Block.Properties.from(Blocks.OAK_SLAB)));
+    public static final RegistryObject<Block> SKY_BLOSSOM_STAIRS = BLOCKS.register("sky_blossom_stairs",
+            () -> new StairsBlock(() -> SKY_BLOSSOM_PLANKS.get().getDefaultState(), Block.Properties.from(Blocks.OAK_STAIRS)));
+    public static final RegistryObject<Block> SKY_BLOSSOM_FENCE = BLOCKS.register("sky_blossom_fence",
+            () -> new FenceBlock(Block.Properties.from(Blocks.OAK_FENCE)));
     public static final RegistryObject<Block> SKY_BLOSSOM_LOG = BLOCKS.register("sky_blossom_log",
             () -> new StrippableSkyLog(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_SKY_BLOSSOM_LOG = BLOCKS.register("stripped_sky_blossom_log",
@@ -127,6 +131,10 @@ public class RegistryHandler {
             () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> LILAC_BLOSSOM_SLAB = BLOCKS.register("lilac_blossom_slab",
             () -> new SlabBlock(Block.Properties.from(Blocks.OAK_SLAB)));
+    public static final RegistryObject<Block> LILAC_BLOSSOM_STAIRS = BLOCKS.register("lilac_blossom_stairs",
+            () -> new StairsBlock(() -> LILAC_BLOSSOM_PLANKS.get().getDefaultState(), Block.Properties.from(Blocks.OAK_STAIRS)));
+    public static final RegistryObject<Block> LILAC_BLOSSOM_FENCE = BLOCKS.register("lilac_blossom_fence",
+            () -> new FenceBlock(Block.Properties.from(Blocks.OAK_FENCE)));
     public static final RegistryObject<Block> LILAC_BLOSSOM_LOG = BLOCKS.register("lilac_blossom_log",
             () -> new StrippableLilacLog(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_LILAC_BLOSSOM_LOG = BLOCKS.register("stripped_lilac_blossom_log",
@@ -146,6 +154,10 @@ public class RegistryHandler {
             () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> FIRE_BLOSSOM_SLAB = BLOCKS.register("fire_blossom_slab",
             () -> new SlabBlock(Block.Properties.from(Blocks.OAK_SLAB)));
+    public static final RegistryObject<Block> FIRE_BLOSSOM_STAIRS = BLOCKS.register("fire_blossom_stairs",
+            () -> new StairsBlock(() -> FIRE_BLOSSOM_PLANKS.get().getDefaultState(), Block.Properties.from(Blocks.OAK_STAIRS)));
+    public static final RegistryObject<Block> FIRE_BLOSSOM_FENCE = BLOCKS.register("fire_blossom_fence",
+            () -> new FenceBlock(Block.Properties.from(Blocks.OAK_FENCE)));
     public static final RegistryObject<Block> FIRE_BLOSSOM_LOG = BLOCKS.register("fire_blossom_log",
             () -> new StrippableFireLog(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_FIRE_BLOSSOM_LOG = BLOCKS.register("stripped_fire_blossom_log",
@@ -173,6 +185,10 @@ public class RegistryHandler {
             () -> new BlockItemBase(SKY_BLOSSOM_PLANKS.get()));
     public static final RegistryObject<Item> SKY_BLOSSOM_SLAB_ITEM = ITEMS.register("sky_blossom_slab",
             () -> new BlockItemBase(SKY_BLOSSOM_SLAB.get()));
+    public static final RegistryObject<Item> SKY_BLOSSOM_STAIRS_ITEM = ITEMS.register("sky_blossom_stairs",
+            () -> new BlockItemBase(SKY_BLOSSOM_STAIRS.get()));
+    public static final RegistryObject<Item> SKY_BLOSSOM_FENCE_ITEM = ITEMS.register("sky_blossom_fence",
+            () -> new BlockItemBase(SKY_BLOSSOM_FENCE.get()));
     public static final RegistryObject<Item> SKY_BLOSSOM_LOG_ITEM = ITEMS.register("sky_blossom_log",
             () -> new BlockItemBase(SKY_BLOSSOM_LOG.get()));
     public static final RegistryObject<Item> STRIPPED_SKY_BLOSSOM_LOG_ITEM = ITEMS.register("stripped_sky_blossom_log",
@@ -194,6 +210,10 @@ public class RegistryHandler {
             () -> new BlockItemBase(LILAC_BLOSSOM_PLANKS.get()));
     public static final RegistryObject<Item> LILAC_BLOSSOM_SLAB_ITEM = ITEMS.register("lilac_blossom_slab",
             () -> new BlockItemBase(LILAC_BLOSSOM_SLAB.get()));
+    public static final RegistryObject<Item> LILAC_BLOSSOM_STAIRS_ITEM = ITEMS.register("lilac_blossom_stairs",
+            () -> new BlockItemBase(LILAC_BLOSSOM_STAIRS.get()));
+    public static final RegistryObject<Item> LILAC_BLOSSOM_FENCE_ITEM = ITEMS.register("lilac_blossom_fence",
+            () -> new BlockItemBase(LILAC_BLOSSOM_FENCE.get()));
     public static final RegistryObject<Item> LILAC_BLOSSOM_LOG_ITEM = ITEMS.register("lilac_blossom_log",
             () -> new BlockItemBase(LILAC_BLOSSOM_LOG.get()));
     public static final RegistryObject<Item> STRIPPED_LILAC_BLOSSOM_LOG_ITEM = ITEMS.register("stripped_lilac_blossom_log",
@@ -215,6 +235,10 @@ public class RegistryHandler {
             () -> new BlockItemBase(FIRE_BLOSSOM_PLANKS.get()));
     public static final RegistryObject<Item> FIRE_BLOSSOM_SLAB_ITEM = ITEMS.register("fire_blossom_slab",
             () -> new BlockItemBase(FIRE_BLOSSOM_SLAB.get()));
+    public static final RegistryObject<Item> FIRE_BLOSSOM_STAIRS_ITEM = ITEMS.register("fire_blossom_stairs",
+            () -> new BlockItemBase(FIRE_BLOSSOM_STAIRS.get()));
+    public static final RegistryObject<Item> FIRE_BLOSSOM_FENCE_ITEM = ITEMS.register("fire_blossom_fence",
+            () -> new BlockItemBase(FIRE_BLOSSOM_FENCE.get()));
     public static final RegistryObject<Item> FIRE_BLOSSOM_LOG_ITEM = ITEMS.register("fire_blossom_log",
             () -> new BlockItemBase(FIRE_BLOSSOM_LOG.get()));
     public static final RegistryObject<Item> STRIPPED_FIRE_BLOSSOM_LOG_ITEM = ITEMS.register("stripped_fire_blossom_log",

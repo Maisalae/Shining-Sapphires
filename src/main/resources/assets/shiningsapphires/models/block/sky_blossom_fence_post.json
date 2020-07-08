@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "shiningsapphires:blocks/sky_blossom_planks"
+  }
+}

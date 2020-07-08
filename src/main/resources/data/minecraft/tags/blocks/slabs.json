@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-
+    "shiningsapphires:sky_blossom_slab",
+    "shiningsapphires:lilac_blossom_slab",
+    "shiningsapphires:fire_blossom_slab"
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "shiningsapphires:lilac_blossom_planks"
+    }
+  },
+  "result": {
+    "item": "shiningsapphires:lilac_blossom_stairs",
+    "count": 4
+  }
+}
