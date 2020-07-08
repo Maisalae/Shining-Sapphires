@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shiningsapphires:lilac_blossom_planks"
+    }
+  ],
+  "result": {
+    "item": "shiningsapphires:lilac_blossom_button"
+  }
+}

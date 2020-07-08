@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "shiningsapphires:block/fire_blossom_pressure_plate" },
+    "powered=true": { "model": "shiningsapphires:block/fire_blossom_pressure_plate_down" }
+  }
+}

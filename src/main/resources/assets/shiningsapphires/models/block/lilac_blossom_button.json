@@ -1,0 +1,6 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "shiningsapphires:blocks/lilac_blossom_planks"
+  }
+}

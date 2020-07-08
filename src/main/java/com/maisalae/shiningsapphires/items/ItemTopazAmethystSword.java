@@ -59,7 +59,6 @@ public class ItemTopazAmethystSword extends SwordItem {
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        addFireAspect(stack);
         ItemStack.addEnchantmentTooltips(tooltip, getEnchantments(stack));
         if(KeyboardHelper.isHoldingShift()) {
             tooltip.add(new StringTextComponent("The rare "+"\u00A74"+"Flame Topaz"));
@@ -69,6 +68,7 @@ public class ItemTopazAmethystSword extends SwordItem {
             tooltip.add(new StringTextComponent("Hold "+"\u00A7b"+"SHIFT"));
             tooltip.add(new StringTextComponent("for more information!"));
         }
+        addFireAspect(stack);
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 

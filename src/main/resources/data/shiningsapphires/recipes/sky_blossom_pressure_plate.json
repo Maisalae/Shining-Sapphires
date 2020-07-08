@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "shiningsapphires:sky_blossom_planks"
+    }
+  },
+  "result": {
+    "item": "shiningsapphires:sky_blossom_pressure_plate"
+  }
+}

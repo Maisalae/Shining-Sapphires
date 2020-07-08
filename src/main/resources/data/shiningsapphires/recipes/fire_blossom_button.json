@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shiningsapphires:fire_blossom_planks"
+    }
+  ],
+  "result": {
+    "item": "shiningsapphires:fire_blossom_button"
+  }
+}

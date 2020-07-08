@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_fence_gate_wall",
+  "textures": {
+    "texture": "shiningsapphires:blocks/sky_blossom_planks"
+  }
+}

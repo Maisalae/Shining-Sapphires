@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_up",
+  "textures": {
+    "texture": "shiningsapphires:blocks/fire_blossom_planks"
+  }
+}
