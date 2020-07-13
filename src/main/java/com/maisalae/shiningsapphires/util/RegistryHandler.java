@@ -117,6 +117,10 @@ public class RegistryHandler {
             () -> new ModButtonBlock(true, Block.Properties.from(Blocks.OAK_BUTTON)));
     public static final RegistryObject<Block> SKY_BLOSSOM_PRESSURE_PLATE = BLOCKS.register("sky_blossom_pressure_plate",
             () -> new ModPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.from(Blocks.OAK_PRESSURE_PLATE)));
+    public static final RegistryObject<Block> SKY_BLOSSOM_DOOR = BLOCKS.register("sky_blossom_door",
+            () -> new ModDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)));
+    public static final RegistryObject<Block> SKY_BLOSSOM_TRAPDOOR = BLOCKS.register("sky_blossom_trapdoor",
+            () -> new ModTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)));
     public static final RegistryObject<Block> SKY_BLOSSOM_LOG = BLOCKS.register("sky_blossom_log",
             () -> new StrippableSkyLog(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_SKY_BLOSSOM_LOG = BLOCKS.register("stripped_sky_blossom_log",
@@ -147,6 +151,10 @@ public class RegistryHandler {
             () -> new ModButtonBlock(true, Block.Properties.from(Blocks.OAK_BUTTON)));
     public static final RegistryObject<Block> LILAC_BLOSSOM_PRESSURE_PLATE = BLOCKS.register("lilac_blossom_pressure_plate",
             () -> new ModPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.from(Blocks.OAK_PRESSURE_PLATE)));
+    public static final RegistryObject<Block> LILAC_BLOSSOM_DOOR = BLOCKS.register("lilac_blossom_door",
+            () -> new ModDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)));
+    public static final RegistryObject<Block> LILAC_BLOSSOM_TRAPDOOR = BLOCKS.register("lilac_blossom_trapdoor",
+            () -> new ModTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)));
     public static final RegistryObject<Block> LILAC_BLOSSOM_LOG = BLOCKS.register("lilac_blossom_log",
             () -> new StrippableLilacLog(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_LILAC_BLOSSOM_LOG = BLOCKS.register("stripped_lilac_blossom_log",
@@ -176,6 +184,10 @@ public class RegistryHandler {
             () -> new ModButtonBlock(true, Block.Properties.from(Blocks.OAK_BUTTON)));
     public static final RegistryObject<Block> FIRE_BLOSSOM_PRESSURE_PLATE = BLOCKS.register("fire_blossom_pressure_plate",
             () -> new ModPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.from(Blocks.OAK_PRESSURE_PLATE)));
+    public static final RegistryObject<Block> FIRE_BLOSSOM_DOOR = BLOCKS.register("fire_blossom_door",
+            () -> new ModDoorBlock(Block.Properties.from(Blocks.OAK_DOOR)));
+    public static final RegistryObject<Block> FIRE_BLOSSOM_TRAPDOOR = BLOCKS.register("fire_blossom_trapdoor",
+            () -> new ModTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)));
     public static final RegistryObject<Block> FIRE_BLOSSOM_LOG = BLOCKS.register("fire_blossom_log",
             () -> new StrippableFireLog(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_FIRE_BLOSSOM_LOG = BLOCKS.register("stripped_fire_blossom_log",
@@ -213,6 +225,10 @@ public class RegistryHandler {
             () -> new BlockItemBase(SKY_BLOSSOM_BUTTON.get()));
     public static final RegistryObject<Item> SKY_BLOSSOM_PRESSURE_PLATE_ITEM = ITEMS.register("sky_blossom_pressure_plate",
             () -> new BlockItemBase(SKY_BLOSSOM_PRESSURE_PLATE.get()));
+    public static final RegistryObject<Item> SKY_BLOSSOM_DOOR_ITEM = ITEMS.register("sky_blossom_door",
+            () -> new BlockItemBase(SKY_BLOSSOM_DOOR.get()));
+    public static final RegistryObject<Item> SKY_BLOSSOM_TRAPDOOR_ITEM = ITEMS.register("sky_blossom_trapdoor",
+            () -> new BlockItemBase(SKY_BLOSSOM_TRAPDOOR.get()));
     public static final RegistryObject<Item> SKY_BLOSSOM_LOG_ITEM = ITEMS.register("sky_blossom_log",
             () -> new BlockItemBase(SKY_BLOSSOM_LOG.get()));
     public static final RegistryObject<Item> STRIPPED_SKY_BLOSSOM_LOG_ITEM = ITEMS.register("stripped_sky_blossom_log",
@@ -244,6 +260,10 @@ public class RegistryHandler {
             () -> new BlockItemBase(LILAC_BLOSSOM_BUTTON.get()));
     public static final RegistryObject<Item> LILAC_BLOSSOM_PRESSURE_PLATE_ITEM = ITEMS.register("lilac_blossom_pressure_plate",
             () -> new BlockItemBase(LILAC_BLOSSOM_PRESSURE_PLATE.get()));
+    public static final RegistryObject<Item> LILAC_BLOSSOM_DOOR_ITEM = ITEMS.register("lilac_blossom_door",
+            () -> new BlockItemBase(LILAC_BLOSSOM_DOOR.get()));
+    public static final RegistryObject<Item> LILAC_BLOSSOM_TRAPDOOR_ITEM = ITEMS.register("lilac_blossom_trapdoor",
+            () -> new BlockItemBase(LILAC_BLOSSOM_TRAPDOOR.get()));
     public static final RegistryObject<Item> LILAC_BLOSSOM_LOG_ITEM = ITEMS.register("lilac_blossom_log",
             () -> new BlockItemBase(LILAC_BLOSSOM_LOG.get()));
     public static final RegistryObject<Item> STRIPPED_LILAC_BLOSSOM_LOG_ITEM = ITEMS.register("stripped_lilac_blossom_log",
@@ -275,6 +295,10 @@ public class RegistryHandler {
             () -> new BlockItemBase(FIRE_BLOSSOM_BUTTON.get()));
     public static final RegistryObject<Item> FIRE_BLOSSOM_PRESSURE_PLATE_ITEM = ITEMS.register("fire_blossom_pressure_plate",
             () -> new BlockItemBase(FIRE_BLOSSOM_PRESSURE_PLATE.get()));
+    public static final RegistryObject<Item> FIRE_BLOSSOM_DOOR_ITEM = ITEMS.register("fire_blossom_door",
+            () -> new BlockItemBase(FIRE_BLOSSOM_DOOR.get()));
+    public static final RegistryObject<Item> FIRE_BLOSSOM_TRAPDOOR_ITEM = ITEMS.register("fire_blossom_trapdoor",
+            () -> new BlockItemBase(FIRE_BLOSSOM_TRAPDOOR.get()));
     public static final RegistryObject<Item> FIRE_BLOSSOM_LOG_ITEM = ITEMS.register("fire_blossom_log",
             () -> new BlockItemBase(FIRE_BLOSSOM_LOG.get()));
     public static final RegistryObject<Item> STRIPPED_FIRE_BLOSSOM_LOG_ITEM = ITEMS.register("stripped_fire_blossom_log",

@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_orientable_trapdoor_open",
+  "textures": {
+    "texture": "shiningsapphires:blocks/fire_blossom_trapdoor"
+  }
+}

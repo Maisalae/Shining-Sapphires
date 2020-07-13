@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "bottom": "shiningsapphires:blocks/lilac_blossom_door_bottom",
+    "top": "shiningsapphires:blocks/lilac_blossom_door_top"
+  }
+}

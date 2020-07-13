@@ -15,6 +15,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.*;
@@ -22,6 +23,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.rmi.registry.Registry;
 
 import static com.maisalae.shiningsapphires.world.gen.TutorialOreGen.*;
 
@@ -77,11 +80,16 @@ public class ShiningSapphires {
         RenderTypeLookup.setRenderLayer(RegistryHandler.SWIRLING_VINES.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.BLAZE_SPROUT.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RegistryHandler.VIOLET_BLOOM.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.SKY_BLOSSOM_DOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_BLOSSOM_DOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_BLOSSOM_DOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.SKY_BLOSSOM_TRAPDOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.LILAC_BLOSSOM_TRAPDOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RegistryHandler.FIRE_BLOSSOM_TRAPDOOR.get(), RenderType.getCutout());
     }
 
     @SubscribeEvent
     public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
-
         generateOre();
     }
 

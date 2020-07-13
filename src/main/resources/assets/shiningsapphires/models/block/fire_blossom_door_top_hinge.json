@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "bottom": "shiningsapphires:blocks/fire_blossom_door_bottom",
+    "top": "shiningsapphires:blocks/fire_blossom_door_top"
+  }
+}

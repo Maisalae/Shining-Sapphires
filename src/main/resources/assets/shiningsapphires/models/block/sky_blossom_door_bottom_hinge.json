@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "bottom": "shiningsapphires:blocks/sky_blossom_door_bottom",
+    "top": "shiningsapphires:blocks/sky_blossom_door_top"
+  }
+}

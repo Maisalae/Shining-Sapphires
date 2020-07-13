@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_door",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "shiningsapphires:lilac_blossom_planks"
+    }
+  },
+  "result": {
+    "item": "shiningsapphires:lilac_blossom_trapdoor",
+    "count": 2
+  }
+}
