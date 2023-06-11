@@ -26,6 +26,8 @@ public class ModBushBlock extends Block implements net.minecraftforge.common.IPl
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        // if the plant is of a given type, it can only be planted on its corresponding pasture type.
+        // if the player attempts to plant it on another block, then this returns false.
         Block block = state.getBlock();
         if(plantType == ShiningSapphires.SKY){
             return block == RegistryHandler.SKY_PASTURE.get();

@@ -7,7 +7,7 @@ loaderVersion="[31,)" #mandatory
 
 modId="shiningsapphires" #mandatory
 
-version="1.15.2-1.2.22.1" #mandatory
+version="1.15.2-0.2.22.1" #mandatory
 
 displayName="Shining Sapphires" #mandatory
 
@@ -16,7 +16,7 @@ displayURL="http://example.com/" #optional
 logoFile="sapphire_logo.png" #optional
 logoBlur=false
 # A text field displayed in the mod UI
-credits="Thanks to my buddy Max for helping me with teething problems and creative choices! :)" #optional
+credits="Thanks to my buddy Max for helping me with teething problems and creative choices! :) And huge thanks to TurtyWurty's tutorials!" #optional
 # A text field displayed in the mod UI
 authors="Yasmin Bettles" #optional
 # The description text for the mod (multi line!) (#mandatory)
@@ -27,6 +27,7 @@ It's filled with beautiful creatures, gorgeous landscapes, and lots of treasures
 If you have any issues, please report them at: https://github.com/Maisalae/Shining-Sapphires/issues <3 happy crafting! :)
 NOTE: SAKURA DIMENSION AND CREATURES ARE NOT CURRENTLY IMPLEMENTED
 THIS MOD IS IN BETA
+(also currently the github is in private so maybe just text or email me or smth, bc if you have a copy of this, you're probably one of my mates)
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.shiningsapphires]] #optional

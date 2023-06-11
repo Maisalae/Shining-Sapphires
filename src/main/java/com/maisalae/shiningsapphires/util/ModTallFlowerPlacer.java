@@ -28,7 +28,10 @@ public class ModTallFlowerPlacer extends BlockPlacer {
     public <T> ModTallFlowerPlacer(Dynamic<T> p_i225829_1_) {
         this();
     }
-
+    // note to self: next time you do something like this, fucking comment it properly, Yas. it took so long for you to
+    // figure this out and you didn't comment it so now future you is still none the wiser. the functions never
+    // got de-obfuscated so still got no idea what these are doing. I know I used to know, but that doesn't help me now.
+    // stop being a silly little sausage and comment properly next time!!!!
     public void func_225567_a_(IWorld worldIn, BlockPos pos, BlockState state, Random random) {
         worldIn.setBlockState(pos, state.with(HALF, DoubleBlockHalf.LOWER), 2);
         worldIn.setBlockState(pos.up(), state.with(HALF, DoubleBlockHalf.UPPER), 2);
