@@ -23,6 +23,14 @@ public class FirePasture extends GrassBlock {
 
 
     public FirePasture() {
+        /*
+        constructor for fire pasture block
+        setting what type of material it is, what colour it shows up as on the map,
+        hardness (how long it takes to mine the block), its blast resistance,
+        what sort of sound it should make,
+        what level of tool (i.e. wood, stone, iron, diamond) is needed to mine it,
+        and what type of tool is needed to mine it (i.e. pickaxe, axe, shovel, etc.)
+        */
         super(Properties.create(Material.ORGANIC, MaterialColor.ORANGE_TERRACOTTA)
                 .hardnessAndResistance(0.5f,2.5f)
                 .harvestLevel(0)
@@ -35,11 +43,12 @@ public class FirePasture extends GrassBlock {
         BlockState plant = plantable.getPlant(world, pos.offset(facing));
         net.minecraftforge.common.PlantType plantType = plantable.getPlantType(world, pos.offset(facing));
         Block plantBlock = plant.getBlock();
-        // sort out the tag for this so you don't have to check individually
+        // note  to self: add a new custom tag for fire blossom plants, so you don't have to check individually
+        // it's fine for now but as more types of plant get added, it'll get out of hand fast
         if(plantBlock == RegistryHandler.FIRE_BLOSSOM_SAPLING.get() || plantBlock == RegistryHandler.FIRE_GRASS.get()) return true;
         return plantType == ShiningSapphires.FIRE;
     }
-    // MAKE THIS SPREADABLE IT DOESNT SPREAD!!!!
+
     @Override
     public boolean canBeReplacedByLeaves(BlockState state, IWorldReader world, BlockPos pos) {
         return false;
